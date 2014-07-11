@@ -24,5 +24,5 @@ with(data,{
 plot(y,as.character(Global_reactive_power), col="black", type="l", xlab="datetime", 
      ylab="Global_reactive_power")
 })
-dev.copy(png, file = "plot4.png",width=480, height=480, res=360)
+dev.copy(png, file = "plot4.png")
 dev.off() 
