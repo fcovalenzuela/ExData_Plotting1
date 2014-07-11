@@ -14,5 +14,5 @@ par(mfrow=c(1,1))
 plot01<-hist(as.numeric(as.character(data$Global_active_power)), col= "red", 
              main="Global Active Power",xlab= "Global Active Power (Kilowatts)",
              ylab = "Global Active Power (Kilowatts)")
-dev.copy(png, file = "plot1.png",width=480, height=480, res=120)
+dev.copy(png, file = "plot1.png")
 dev.off() 
