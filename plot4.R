@@ -10,6 +10,7 @@ household$y<-strptime(household$y, "%Y-%m-%d %H:%M:%S")
 data<-subset(household, Date== as.Date("2007-02-01") | Date==as.Date("2007-02-02"))
 
 ###Plot 4
+png(file = "plot4.png") 
 par(mfrow=c(2,2))
 with(data,{
   plot(y,as.character(Global_active_power), col="black", type="l", xlab="", 
@@ -20,9 +21,8 @@ with(data,{
  points(data$y,as.character(data$Sub_metering_2), col="red", type="l")
  points(data$y,as.character(data$Sub_metering_3), col="blue", type="l")
  legend(x="topright", col= c("black","red","blue"), 
-        legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=1,cex=.2)}
+        legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=1,cex=1,bty="n")}
 plot(y,as.character(Global_reactive_power), col="black", type="l", xlab="datetime", 
      ylab="Global_reactive_power")
 })
-dev.copy(png, file = "plot4.png")
 dev.off() 
